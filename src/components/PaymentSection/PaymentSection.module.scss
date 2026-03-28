@@ -1,0 +1,39 @@
+@use '../../styles/tokens' as *;
+
+.wrap {
+  background: $nude;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  border-radius: $radius-card;
+  border: 1px solid $nude-dk;
+  padding: 1rem;
+  background: $white;
+
+  span {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    margin-top: 0.6rem;
+    font-family: $font-display;
+  }
+
+  p {
+    margin-top: 0.4rem;
+    color: $ink-soft;
+    font-size: $text-sm;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

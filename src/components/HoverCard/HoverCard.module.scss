@@ -1,0 +1,57 @@
+@use '../../styles/tokens' as *;
+
+.card {
+  --card-hue: 348 80% 60%;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+
+  min-height: 100%;
+  border-radius: $radius-card;
+  position: relative;
+  background: rgb(255 255 255 / 16%);
+  transition: background $transition;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    opacity: 0;
+    pointer-events: none;
+    background: radial-gradient(
+      500px circle at var(--mouse-x) var(--mouse-y),
+      hsl(var(--card-hue) / 0.32),
+      transparent 42%
+    );
+    transition: opacity $transition;
+    z-index: 1;
+  }
+
+  &:hover {
+    background: radial-gradient(
+      420px circle at var(--mouse-x) var(--mouse-y),
+      hsl(var(--card-hue) / 0.52),
+      rgb(255 255 255 / 16%) 42%
+    );
+
+    &::before {
+      opacity: 1;
+    }
+  }
+}
+
+.content {
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: $white;
+  z-index: 2;
+}
+
+.blush {
+  --card-hue: 348 80% 60%;
+}
+
+.gold {
+  --card-hue: 30 65% 58%;
+}

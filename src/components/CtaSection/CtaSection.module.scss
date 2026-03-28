@@ -1,0 +1,35 @@
+@use '../../styles/tokens' as *;
+
+.wrap {
+  position: relative;
+}
+
+.box {
+  background: $ink;
+  color: $white;
+  border-radius: $radius-card;
+  padding: 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: $text-sec;
+    font-family: $font-display;
+  }
+
+  p {
+    margin: 0.8rem auto 0;
+    max-width: 60ch;
+  }
+
+  button {
+    margin-top: 1.2rem;
+    border: 0;
+    background: $wa-green;
+    color: $white;
+    border-radius: $radius;
+    padding: 0.85rem 1.2rem;
+    text-transform: uppercase;
+    font-size: $text-sm;
+    cursor: pointer;
+  }
+}
