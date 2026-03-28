@@ -1,0 +1,103 @@
+@use '../../styles/tokens' as *;
+
+.nav {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+  background: rgb(252 248 246 / 75%);
+  transition: box-shadow $transition;
+}
+
+.scrolled {
+  box-shadow: 0 10px 28px rgb(29 19 24 / 10%);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+}
+
+.brand {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-family: $font-display;
+  font-size: $text-xl;
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.links {
+  display: inline-flex;
+  gap: 1.4rem;
+  font-size: $text-sm;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  a {
+    color: $ink-soft;
+    transition: color $transition;
+
+    &:hover {
+      color: $blush;
+    }
+  }
+}
+
+.toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  border: 1px solid $nude-dk;
+  background: $white;
+  border-radius: $radius;
+
+  span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    margin: 3px auto;
+    background: $ink;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 74px 0 0;
+  display: grid;
+  place-content: center;
+  gap: 1.2rem;
+  background: $surface;
+  transform: translateX(100%);
+  transition: transform $transition;
+
+  a {
+    font-size: $text-lg;
+    font-family: $font-display;
+  }
+}
+
+.open {
+  transform: translateX(0);
+}
+
+@media (max-width: 900px) {
+  .links {
+    display: none;
+  }
+
+  .toggle {
+    display: block;
+  }
+}
+
+@media (min-width: 901px) {
+  .overlay {
+    display: none;
+  }
+}

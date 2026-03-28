@@ -1,0 +1,42 @@
+$surface:    #FCF8F6;
+$nude:       #F3E8E2;
+$nude-dk:    #E2D2CA;
+
+$ink:        #1D1318;
+$ink-soft:   #5D4A51;
+
+$blush:      #A63B4E;
+$blush-dk:   #7E2838;
+
+$gold:       #C68562;
+$gold-lt:    #DEAA84;
+
+$white:      #FFFFFF;
+$wa-green:   #25D366;
+
+$color-primary:    $blush;
+$color-secondary:  $gold;
+$color-background: $surface;
+$color-text:       $ink;
+$color-text-muted: $ink-soft;
+
+$font-display: 'Playfair Display', Georgia, serif;
+$font-body:    'DM Sans', sans-serif;
+
+$text-xs:   0.65rem;
+$text-sm:   0.75rem;
+$text-base: 0.95rem;
+$text-lg:   1.15rem;
+$text-xl:   1.45rem;
+$text-hero: clamp(2.6rem, 5.5vw, 5rem);
+$text-sec:  clamp(1.7rem, 3.5vw, 2.8rem);
+
+$viewport-content: min(90vw, 1440px);
+$radius:           6px;
+$radius-card:      12px;
+$transition:       0.3s cubic-bezier(.4,0,.2,1);
+
+$section-padding-y:        5.5rem;
+$section-padding-y-mobile: 4rem;
+$section-padding-x:        2rem;
+$section-padding-x-mobile: 1.1rem;

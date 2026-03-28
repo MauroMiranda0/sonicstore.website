@@ -1,0 +1,70 @@
+@use '../../styles/tokens' as *;
+
+.wrap {
+  background: $nude;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: $white;
+  border: 1px solid $nude-dk;
+  border-radius: $radius-card;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.75rem;
+
+  h3 {
+    font-family: $font-display;
+  }
+
+  p {
+    color: $ink-soft;
+    font-size: $text-sm;
+  }
+
+  button {
+    background: transparent;
+    color: $blush;
+    border: 1px solid $blush;
+    padding: 0.78rem;
+    border-radius: $radius;
+    text-transform: uppercase;
+    font-size: $text-sm;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all $transition;
+
+    &:hover {
+      background: $blush;
+      color: $white;
+    }
+  }
+}
+
+.logoSurface {
+  min-height: 115px;
+  border-radius: calc($radius-card - 4px);
+  display: grid;
+  place-items: center;
+
+  img {
+    max-height: 56px;
+    width: auto;
+  }
+}
+
+.logoFallback {
+  color: $white;
+  font-family: $font-display;
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

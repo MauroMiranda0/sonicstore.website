@@ -1,0 +1,73 @@
+@use '../../styles/tokens' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: $white;
+  border-radius: $radius-card;
+  border: 1px solid $nude-dk;
+  padding: 0.9rem;
+  display: grid;
+  gap: 0.75rem;
+
+  h3 {
+    font-family: $font-display;
+    font-size: $text-lg;
+  }
+
+  p {
+    color: $ink-soft;
+    font-size: $text-sm;
+  }
+
+  button {
+    border: 0;
+    background: $blush;
+    color: $white;
+    padding: 0.78rem;
+    border-radius: $radius;
+    text-transform: uppercase;
+    font-size: $text-sm;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background-color $transition;
+
+    &:hover {
+      background: $blush-dk;
+    }
+  }
+}
+
+.logoSurface {
+  border-radius: calc($radius-card - 4px);
+  min-height: 110px;
+  display: grid;
+  place-items: center;
+
+  img {
+    max-height: 58px;
+    width: auto;
+  }
+}
+
+.logoFallback {
+  font-family: $font-display;
+  font-size: $text-lg;
+}
+
+.badge {
+  color: $gold;
+  text-transform: uppercase;
+  font-size: $text-xs;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

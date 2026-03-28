@@ -1,0 +1,39 @@
+@use '../../styles/tokens' as *;
+
+.wrap {
+  margin-top: 1rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid $nude-dk;
+  border-bottom: 1px solid $nude-dk;
+  overflow: hidden;
+  background: $nude;
+}
+
+.track {
+  display: inline-flex;
+  min-width: 100%;
+  gap: 2rem;
+  white-space: nowrap;
+  animation: marquee var(--duration) linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  span {
+    color: $gold;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: $text-sm;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,43 @@
+@use '../../styles/tokens' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.step {
+  padding: 1rem;
+  border-radius: $radius-card;
+  background: $white;
+  border: 1px solid $nude-dk;
+
+  span {
+    color: $gold;
+    font-family: $font-display;
+  }
+
+  h3 {
+    margin-top: 0.6rem;
+    font-family: $font-display;
+    font-size: $text-lg;
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: $ink-soft;
+    font-size: $text-sm;
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
