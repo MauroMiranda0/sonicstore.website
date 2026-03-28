@@ -88,10 +88,13 @@
 .visual {
   position: relative;
   min-height: 420px;
+  border-radius: $radius-card;
+  overflow: hidden;
 }
 
 .floatCard {
   position: absolute;
+  z-index: 3;
   width: min(280px, 80%);
   background: $white;
   border-radius: $radius-card;
@@ -115,11 +118,22 @@
   min-height: 115px;
   display: grid;
   place-items: center;
+  overflow: hidden;
 
   img {
     width: auto;
     max-height: 58px;
   }
+}
+
+.logoFallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 115px;
+  font-family: $font-display;
+  font-size: $text-lg;
 }
 
 .card1 {

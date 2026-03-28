@@ -1,6 +1,8 @@
 import styles from './Hero.module.scss';
 import { SITE_TAGLINE, HERO_STATS } from '../../config/constants';
 import { brands } from '../../data/brands';
+import { heroSlides } from '../../data/heroSlides';
+import BackgroundSlider from '../BackgroundSlider/BackgroundSlider';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 
 export default function Hero() {
@@ -29,14 +31,19 @@ export default function Hero() {
         </div>
 
         <div className={styles.visual}>
+          <BackgroundSlider slides={heroSlides} />
           {featuredBrands.map((brand, index) => (
-            <article key={brand.id} className={`${styles.floatCard} ${styles[`card${index + 1}`]}`}>
-              <div className={styles.logoWrap} style={{ backgroundColor: brand.bgColor }}>
-                <img src={brand.logoSrc} alt={brand.logoAlt} loading={index === 0 ? 'eager' : 'lazy'} />
-              </div>
-              <h3>{brand.name}</h3>
-              <p>{brand.category}</p>
-            </article>
+            <div key={brand.id} className={styles.logoWrap} style={{ backgroundColor: brand.bgColor }}>
+              <img
+                src={brand.logoSrc}
+                alt={brand.logoAlt}
+                loading={index === 0 ? 'eager' : 'lazy'}
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none';
+                  e.currentTarget.nextElementSibling.style.display = 'flex';
+                }}
+              />
+            </div>
           ))}
         </div>
       </div>
