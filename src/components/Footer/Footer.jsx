@@ -1,5 +1,6 @@
 import styles from './Footer.module.scss';
 import { SITE_NAME, SITE_TAGLINE, WA_NUMBER, buildWaUrl } from '../../config/constants';
+import getImageUrl from '../../config/imageUrls';
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
       <div className={`container ${styles.inner}`}>
         <div>
           <a href="#" className={styles.brand} aria-label="Ir al inicio">
-            <img src="/logo.png" alt={`${SITE_NAME} logo`} width="34" height="34" loading="lazy" />
+            <img src={getImageUrl('logo.png')} alt={`${SITE_NAME} logo`} width="34" height="34" loading="lazy" />
             <span>{SITE_NAME}</span>
           </a>
           <p>{SITE_TAGLINE}</p>
