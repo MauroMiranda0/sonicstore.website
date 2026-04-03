@@ -13,7 +13,18 @@ export default function PaymentSection({ methods }) {
           {methods.map((method) => (
             <div key={method.id} className={styles.methodSlot}>
               <article className={styles.methodCard}>
-                <span className={styles.methodIcon} aria-hidden="true">{method.icon}</span>
+                <div className={styles.methodIconWrap}>
+                  {method.icon.startsWith('/') ? (
+                    <img
+                      className={`${styles.methodIconImage} ${method.id === 'mercadopago' ? styles.methodIconImageMercadoPago : ''}`.trim()}
+                      src={method.icon}
+                      alt={method.iconAlt ?? `Icono de ${method.name}`}
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className={styles.methodIcon} aria-hidden="true">{method.icon}</span>
+                  )}
+                </div>
                 <h3 className={styles.methodName}>{method.name}</h3>
                 <p className={styles.methodDescription}>{method.description}</p>
               </article>

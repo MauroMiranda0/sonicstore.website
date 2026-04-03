@@ -37,10 +37,27 @@
   }
 }
 
+.methodIconWrap {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
 .methodIcon {
   font-size: 2rem;
-  display: block;
-  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.methodIconImage {
+  max-height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.methodIconImageMercadoPago {
+  max-height: 3.6rem;
 }
 
 .methodName {

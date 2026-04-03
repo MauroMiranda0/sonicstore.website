@@ -11,7 +11,6 @@
   border: 0;
   background: $wa-green;
   color: $white;
-  font-size: 1.3rem;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -22,6 +21,12 @@
   &:hover {
     transform: scale(1.1);
   }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 @keyframes pulse {
