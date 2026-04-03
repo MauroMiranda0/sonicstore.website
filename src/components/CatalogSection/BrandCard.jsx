@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './CatalogSection.module.scss';
+import SmartImage from '../common/SmartImage';
 
 export default function BrandCard({ brand, onCtaClick }) {
   const [imgError, setImgError] = useState(false);
@@ -10,7 +11,7 @@ export default function BrandCard({ brand, onCtaClick }) {
       <div className={styles.logoArea} style={{ '--card-gradient': brand.bgColor }}>
         <span className={styles.onlineBadge}>ONLINE</span>
         {!imgError ? (
-          <img src={brand.logoSrc} alt={brand.logoAlt} loading="lazy" onError={() => setImgError(true)} />
+          <SmartImage src={brand.logoSrc} alt={brand.logoAlt} loading="lazy" onError={() => setImgError(true)} />
         ) : (
           <div className={styles.logoFallback}>{brand.name}</div>
         )}
@@ -21,7 +22,7 @@ export default function BrandCard({ brand, onCtaClick }) {
         <p className={styles.brandDescription}>{brand.description}</p>
         <div className={styles.product}>
           {!productImgError ? (
-            <img
+            <SmartImage
               src={brand.productImageSrc}
               alt={brand.productImageAlt}
               loading="lazy"

@@ -1,5 +1,6 @@
 import styles from './PaymentSection.module.scss';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import SmartImage from '../common/SmartImage';
 
 export default function PaymentSection({ methods }) {
   const revealRef = useScrollReveal();
@@ -15,7 +16,7 @@ export default function PaymentSection({ methods }) {
               <article className={styles.methodCard}>
                 <div className={styles.methodIconWrap}>
                   {method.icon.startsWith('/') ? (
-                    <img
+                    <SmartImage
                       className={`${styles.methodIconImage} ${method.id === 'mercadopago' ? styles.methodIconImageMercadoPago : ''}`.trim()}
                       src={method.icon}
                       alt={method.iconAlt ?? `Icono de ${method.name}`}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './PdfSection.module.scss';
+import SmartImage from '../common/SmartImage';
 
 export default function PdfCard({ catalog, onCtaClick }) {
   const [imgError, setImgError] = useState(false);
@@ -10,7 +11,7 @@ export default function PdfCard({ catalog, onCtaClick }) {
       <div className={styles.logoArea} style={{ '--card-gradient': catalog.bgGradient }}>
         <span className={styles.pdfBadge}>PDF</span>
         {!imgError ? (
-          <img src={catalog.logoSrc} alt={catalog.logoAlt} loading="lazy" onError={() => setImgError(true)} />
+          <SmartImage src={catalog.logoSrc} alt={catalog.logoAlt} loading="lazy" onError={() => setImgError(true)} />
         ) : (
           <div className={styles.logoFallback}>{catalog.name}</div>
         )}
@@ -21,7 +22,7 @@ export default function PdfCard({ catalog, onCtaClick }) {
         <p className={styles.catalogDescription}>{catalog.description}</p>
         <div className={styles.product}>
           {!productImgError ? (
-            <img
+            <SmartImage
               src={catalog.productImageSrc}
               alt={catalog.productImageAlt}
               loading="lazy"
