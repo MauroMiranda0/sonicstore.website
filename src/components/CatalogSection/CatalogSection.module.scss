@@ -79,8 +79,8 @@
   border-bottom: $border-subtle;
 
   img {
-    max-width: 7rem;
-    max-height: 3.5rem;
+    max-width: 4.667rem;
+    max-height: 2.333rem;
     object-fit: contain;
   }
 }
@@ -130,18 +130,20 @@
   font-weight: $weight-regular;
   color: $ink-soft;
   line-height: 1.45;
-  flex: 1;
 }
 
 .product {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.45rem;
+  flex: 1;
 }
 
 .product img,
 .productFallback {
   width: 100%;
-  height: 150px;
+  min-height: 150px;
+  flex: 1;
   border-radius: $radius;
 }
 

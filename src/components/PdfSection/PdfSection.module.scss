@@ -82,8 +82,8 @@
   padding: 1.5rem;
 
   img {
-    max-width: 7.2rem;
-    max-height: 3.8rem;
+    max-width: 4.8rem;
+    max-height: 2.533rem;
     object-fit: contain;
   }
 }
@@ -131,18 +131,20 @@
   font-weight: $weight-regular;
   color: $ink-soft;
   line-height: 1.45;
-  flex: 1;
 }
 
 .product {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.45rem;
+  flex: 1;
 }
 
 .product img,
 .productFallback {
   width: 100%;
-  height: 150px;
+  min-height: 150px;
+  flex: 1;
   border-radius: $radius;
 }
 
