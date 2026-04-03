@@ -8,6 +8,9 @@ export const brands = [
     logoSrc: '/img/Marcas/natura.png',
     logoAlt: 'Logo Natura Cosméticos',
     bgColor: '#f7f2ec',
+    productName: 'Natura Ekos Castaña Crema Corporal',
+    productImageSrc: '/img/otros/cosmetic-01.jpg',
+    productImageAlt: 'Crema corporal Natura Ekos Castaña',
     waMessage: 'Hola. Me gustaría ver el catálogo de Natura.',
   },
   {
@@ -19,6 +22,9 @@ export const brands = [
     logoSrc: '/img/Marcas/lbel.png',
     logoAlt: "Logo L'BEL",
     bgColor: '#1a1a2e',
+    productName: "L'BEL Rouge L'Extrait Labial",
+    productImageSrc: '/img/otros/cosmetic-02.jpg',
+    productImageAlt: "Labial premium de L'BEL",
     waMessage: "Hola. Me gustaría ver el catálogo de L'BEL.",
   },
   {
@@ -30,6 +36,9 @@ export const brands = [
     logoSrc: '/img/Marcas/esika.png',
     logoAlt: 'Logo Ésika',
     bgColor: '#3b0a45',
+    productName: 'Ésika Magnat Fragancia',
+    productImageSrc: '/img/otros/cosmetic-03.jpg',
+    productImageAlt: 'Fragancia Magnat de Ésika',
     waMessage: 'Hola. Me gustaría ver el catálogo de Ésika.',
   },
   {
@@ -41,6 +50,9 @@ export const brands = [
     logoSrc: '/img/Marcas/cyzone.png',
     logoAlt: 'Logo Cyzone',
     bgColor: '#ff3c6e',
+    productName: 'Cyzone Vibra Mascara de pestañas',
+    productImageSrc: '/img/otros/cosmetic-05.jpg',
+    productImageAlt: 'Mascara de pestañas de Cyzone',
     waMessage: 'Hola. Me gustaría ver el catálogo de Cyzone.',
   },
   {
@@ -52,6 +64,9 @@ export const brands = [
     logoSrc: '/img/Marcas/andrea.png',
     logoAlt: 'Logo Andrea',
     bgColor: '#fff8f0',
+    productName: 'Andrea Sandalia Plataforma Mujer',
+    productImageSrc: '/img/otros/calzado-03.jpg',
+    productImageAlt: 'Sandalia de plataforma para mujer de Andrea',
     waMessage: 'Hola. Me gustaría ver el catálogo de Andrea.',
   },
   {
@@ -63,6 +78,9 @@ export const brands = [
     logoSrc: '/img/Marcas/avon.png',
     logoAlt: 'Logo Avon',
     bgColor: '#f4ebef',
+    productName: 'Avon Anew Ultimate Serum',
+    productImageSrc: '/img/otros/cosmetic-01.jpg',
+    productImageAlt: 'Serum facial de la linea Anew de Avon',
     waMessage: 'Hola. Me gustaría ver el catálogo de Avon.',
   },
   {
@@ -74,6 +92,9 @@ export const brands = [
     logoSrc: '/img/Marcas/ilusion.png',
     logoAlt: 'Logo Ilusión',
     bgColor: '#fdf0f1',
+    productName: 'Ilusión Brasier de Encaje',
+    productImageSrc: '/img/otros/ropa-02.jpg',
+    productImageAlt: 'Brasier de encaje de la marca Ilusión',
     waMessage: 'Hola. Me gustaría ver el catálogo de Ilusión.',
   },
   {
@@ -85,6 +106,9 @@ export const brands = [
     logoSrc: '/img/brands/marca1.png',
     logoAlt: 'Logo Price Shoes',
     bgColor: '#f5f0ea',
+    productName: 'Price Shoes Tenis Urbanos',
+    productImageSrc: '/img/otros/calzado-06.jpg',
+    productImageAlt: 'Tenis urbanos de Price Shoes',
     waMessage: 'Hola. Me gustaría ver el catálogo de Price Shoes.',
   },
   {
@@ -96,6 +120,9 @@ export const brands = [
     logoSrc: '/img/brands/marca2.png',
     logoAlt: 'Logo Cklass',
     bgColor: '#f7f3ef',
+    productName: 'Cklass Bota Casual',
+    productImageSrc: '/img/otros/calzado-07.jpg',
+    productImageAlt: 'Bota casual de Cklass',
     waMessage: 'Hola. Me gustaría ver el catálogo de Cklass.',
   },
 ];

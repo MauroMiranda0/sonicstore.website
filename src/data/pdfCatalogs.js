@@ -6,6 +6,9 @@ export const pdfCatalogs = [
     logoSrc: '/img/Marcas/terramar.png',
     logoAlt: 'Logo Terramar Brands',
     bgGradient: 'linear-gradient(135deg, #0a4f7a 0%, #0e7db5 100%)',
+    productName: 'Terramar Suero Facial Hidratante',
+    productImageSrc: '/img/otros/cosmetic-02.jpg',
+    productImageAlt: 'Suero facial hidratante de Terramar Brands',
     waMessage: 'Hola. Me gustaría recibir el catálogo PDF de Terramar Brands.',
   },
   {
@@ -15,6 +18,9 @@ export const pdfCatalogs = [
     logoSrc: '/img/Marcas/forever.png',
     logoAlt: 'Logo Forever Living',
     bgGradient: 'linear-gradient(135deg, #F7BF01 0%, #F8D45E 100%)',
+    productName: 'Forever Aloe Vera Gel',
+    productImageSrc: '/img/otros/product-1.jpg',
+    productImageAlt: 'Gel de Aloe Vera de Forever Living',
     waMessage: 'Hola. Me gustaría recibir el catálogo PDF de Forever Living.',
   },
 ];

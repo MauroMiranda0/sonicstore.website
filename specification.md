@@ -72,6 +72,9 @@ src/
 //   logoSrc: string      — URL del logo (relativa o absoluta)
 //   logoAlt: string      — texto alternativo accesible
 //   bgColor: string      — color de fondo del área del logo (CSS value)
+//   productName: string      — nombre del producto representativo
+//   productImageSrc: string  — imagen del producto representativo
+//   productImageAlt: string  — texto alternativo accesible del producto
 //   waMessage: string    — mensaje pre-cargado para WhatsApp (sin encode)
 // }
 
@@ -148,6 +151,9 @@ export const brands = [
 //   logoSrc: string
 //   logoAlt: string
 //   bgGradient: string  — valor CSS para background (gradient o color sólido)
+//   productName: string      — nombre del producto representativo
+//   productImageSrc: string  — imagen del producto representativo
+//   productImageAlt: string  — texto alternativo accesible del producto
 //   waMessage: string
 // }
 
@@ -282,6 +288,7 @@ export const marqueeItems = [
 //
 // No abre WhatsApp directamente. Delega al handler del padre.
 // Esto permite testear el componente sin side effects.
+// Renderiza logo de marca y producto representativo.
 ```
 
 ### 3.5 `<CatalogSection>`
@@ -302,6 +309,7 @@ export const marqueeItems = [
 // Props:
 //   catalog: PdfItem
 //   onCtaClick: (waMessage: string) => void
+// Renderiza logo de marca y producto representativo.
 ```
 
 ### 3.7 `<PdfSection>`

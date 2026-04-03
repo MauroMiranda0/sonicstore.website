@@ -4,6 +4,7 @@ import HoverCard from '../HoverCard/HoverCard';
 
 export default function PdfCard({ catalog, onCtaClick }) {
   const [imgError, setImgError] = useState(false);
+  const [productImgError, setProductImgError] = useState(false);
 
   return (
     <article className={styles.cardWrap}>
@@ -18,6 +19,19 @@ export default function PdfCard({ catalog, onCtaClick }) {
           </div>
           <h3>{catalog.name}</h3>
           <p>{catalog.description}</p>
+          <div className={styles.product}>
+            {!productImgError ? (
+              <img
+                src={catalog.productImageSrc}
+                alt={catalog.productImageAlt}
+                loading="lazy"
+                onError={() => setProductImgError(true)}
+              />
+            ) : (
+              <div className={styles.productFallback}>{catalog.productName}</div>
+            )}
+            <span className={styles.productName}>{catalog.productName}</span>
+          </div>
           <button type="button" onClick={() => onCtaClick(catalog.waMessage)}>
             Solicitar PDF
           </button>

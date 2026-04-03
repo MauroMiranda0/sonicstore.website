@@ -4,6 +4,7 @@ import HoverCard from '../HoverCard/HoverCard';
 
 export default function BrandCard({ brand, onCtaClick }) {
   const [imgError, setImgError] = useState(false);
+  const [productImgError, setProductImgError] = useState(false);
 
   return (
     <article className={styles.cardWrap}>
@@ -20,6 +21,19 @@ export default function BrandCard({ brand, onCtaClick }) {
           <span className={styles.badge}>{`${brand.categoryEmoji} ${brand.category}`}</span>
           <h3>{brand.name}</h3>
           <p>{brand.description}</p>
+          <div className={styles.product}>
+            {!productImgError ? (
+              <img
+                src={brand.productImageSrc}
+                alt={brand.productImageAlt}
+                loading="lazy"
+                onError={() => setProductImgError(true)}
+              />
+            ) : (
+              <div className={styles.productFallback}>{brand.productName}</div>
+            )}
+            <span className={styles.productName}>{brand.productName}</span>
+          </div>
           <button type="button" onClick={() => onCtaClick(brand.waMessage)}>
             Pedir Catálogo
           </button>

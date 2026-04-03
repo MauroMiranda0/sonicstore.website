@@ -303,6 +303,8 @@ export function useScrollReveal() {
 
 ### Criterio de Aceptación — Fase 4
 - Las secciones online y PDF renderizan todas las marcas desde el data layer.
+- Cada card de `Catálogos Online` muestra un producto representativo por marca.
+- Cada card de `Catálogos PDF` muestra un producto representativo por marca.
 - Agregar una nueva entrada a `brands.js` aparece en la UI sin cambiar ningún JSX.
 - El hero renderiza con las animaciones `fadeUp` en el texto y `float` en las cards.
 - El scroll reveal funciona en todas las secciones.
