@@ -7,7 +7,8 @@ export default function BrandCard({ brand, onCtaClick }) {
 
   return (
     <article className={styles.brandCard}>
-      <div className={styles.logoArea} style={{ '--card-bg': brand.bgColor }}>
+      <div className={styles.logoArea} style={{ '--card-gradient': brand.bgColor }}>
+        <span className={styles.onlineBadge}>ONLINE</span>
         {!imgError ? (
           <img src={brand.logoSrc} alt={brand.logoAlt} loading="lazy" onError={() => setImgError(true)} />
         ) : (
@@ -16,7 +17,6 @@ export default function BrandCard({ brand, onCtaClick }) {
       </div>
 
       <div className={styles.cardBody}>
-        <span className={styles.categoryBadge}>{`${brand.categoryEmoji} ${brand.category}`}</span>
         <h3 className={styles.brandName}>{brand.name}</h3>
         <p className={styles.brandDescription}>{brand.description}</p>
         <div className={styles.product}>

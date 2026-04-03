@@ -58,7 +58,6 @@
   border-radius: $radius;
   overflow: hidden;
   transition: border-color $transition, transform $transition;
-  cursor: pointer;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -70,27 +69,41 @@
 }
 
 .logoArea {
-  aspect-ratio: 8 / 3;
+  position: relative;
+  background: var(--card-gradient);
+  aspect-ratio: 3 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
-  background: var(--card-bg, #{$nude});
-  border-bottom: $border-subtle;
 
   img {
     width: 66.666%;
-    max-width: 14rem;
-    max-height: 7rem;
+    max-width: 14.4rem;
+    max-height: 7.6rem;
     object-fit: contain;
   }
 }
 
+.onlineBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: $ink;
+  color: $white;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius;
+}
+
 .logoFallback {
+  color: $white;
   font-family: $font-display;
   font-size: $text-lg;
   font-weight: $weight-bold;
-  color: $ink;
 }
 
 .cardBody {
@@ -99,22 +112,6 @@
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-}
-
-.categoryBadge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-family: $font-body;
-  font-size: $text-xs;
-  font-weight: $weight-bold;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: $gold;
-  border: 1px solid $gold;
-  border-radius: $radius;
-  padding: 0.15rem 0.4rem;
-  align-self: flex-start;
 }
 
 .brandName {
@@ -157,10 +154,11 @@
   display: grid;
   place-items: center;
   text-align: center;
-  background: $nude;
+  background: $white;
   color: $ink-soft;
   padding: 0.75rem;
   font-size: $text-sm;
+  border: $border-subtle;
 }
 
 .productName {
@@ -177,21 +175,22 @@
 
   button {
     width: 100%;
-    background: $blush;
-    color: $white;
+    background: transparent;
+    color: $blush;
+    border: 2px solid $blush;
+    border-radius: $radius;
+    padding: 0.65rem 1rem;
     font-family: $font-body;
-    font-weight: $weight-bold;
     font-size: $text-sm;
+    font-weight: $weight-bold;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    padding: 0.65rem 1rem;
-    border: none;
-    border-radius: $radius;
     cursor: pointer;
-    transition: background-color $transition;
+    transition: background-color $transition, color $transition;
 
     &:hover {
-      background: $blush-dk;
+      background: $blush;
+      color: $white;
     }
   }
 }
