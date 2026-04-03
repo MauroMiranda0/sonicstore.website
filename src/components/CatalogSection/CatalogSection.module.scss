@@ -70,7 +70,7 @@
 }
 
 .logoArea {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 8 / 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -79,8 +79,9 @@
   border-bottom: $border-subtle;
 
   img {
-    max-width: 4.667rem;
-    max-height: 2.333rem;
+    width: 66.666%;
+    max-width: 14rem;
+    max-height: 7rem;
     object-fit: contain;
   }
 }

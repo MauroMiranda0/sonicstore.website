@@ -1045,4 +1045,13 @@ con criterios de aceptación en @TECHNICAL_PLAN.md, implementa el repositorio de
 de aceptación de la spec.
 
 
+
+
+Basándote en la Fuente de verdad para identidad, principios de diseño y reglas de componentes en @contitution_v2.md, Contratos de componentes React, estructura de datos y reglas de renderizado en @specification_v2.md y con criterios de aceptación en @specification_v2.md,
+
+
+
+
 Genera una suite de pruebas unitarias y de integración que verifiquen punto por punto los requisitos definidos en SPECIFICATION.md y TECHNICAL_PLAN.md
+
+

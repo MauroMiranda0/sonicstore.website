@@ -75,15 +75,16 @@
 .logoArea {
   position: relative;
   background: var(--card-gradient);
-  aspect-ratio: 3 / 2;
+  aspect-ratio: 3 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
 
   img {
-    max-width: 4.8rem;
-    max-height: 2.533rem;
+    width: 66.666%;
+    max-width: 14.4rem;
+    max-height: 7.6rem;
     object-fit: contain;
   }
 }
