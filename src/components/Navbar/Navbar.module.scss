@@ -4,13 +4,15 @@
   position: fixed;
   inset: 0 0 auto;
   z-index: 1000;
-  backdrop-filter: blur(8px);
-  background: rgb(252 248 246 / 75%);
-  transition: box-shadow $transition;
+  background: $surface;
+  border-bottom: $border-subtle;
+  transition: border-color $transition, background-color $transition;
 }
 
 .scrolled {
-  box-shadow: 0 10px 28px rgb(29 19 24 / 10%);
+  background: rgb(252 248 246 / 96%);
+  backdrop-filter: blur(12px);
+  border-bottom-color: $nude-dk;
 }
 
 .inner {
@@ -26,26 +28,49 @@
   align-items: center;
   font-family: $font-display;
   font-size: $text-xl;
+  font-weight: $weight-bold;
 
   img {
-    border-radius: 50%;
+    border-radius: $radius;
   }
 }
 
 .links {
   display: inline-flex;
-  gap: 1.4rem;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink {
+  font-family: $font-body;
   font-size: $text-sm;
+  font-weight: $weight-bold;
+  color: $ink-soft;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
+  transition: color $transition;
 
-  a {
-    color: $ink-soft;
-    transition: color $transition;
+  &:hover {
+    color: $ink;
+  }
+}
 
-    &:hover {
-      color: $blush;
-    }
+.navCta {
+  background: $blush;
+  color: $white;
+  border: 2px solid $blush;
+  border-radius: $radius;
+  padding: 0.55rem 1.2rem;
+  font-family: $font-body;
+  font-size: $text-sm;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: background-color $transition, color $transition;
+
+  &:hover {
+    background: transparent;
+    color: $blush;
   }
 }
 
@@ -53,7 +78,7 @@
   display: none;
   width: 42px;
   height: 42px;
-  border: 1px solid $nude-dk;
+  border: $border-subtle;
   background: $white;
   border-radius: $radius;
 
@@ -71,15 +96,32 @@
   inset: 74px 0 0;
   display: grid;
   place-content: center;
-  gap: 1.2rem;
+  gap: 1rem;
   background: $surface;
   transform: translateX(100%);
   transition: transform $transition;
+  border-top: $border-subtle;
+}
 
-  a {
-    font-size: $text-lg;
-    font-family: $font-display;
-  }
+.mobileLink,
+.mobileCta {
+  font-family: $font-body;
+  font-size: $text-sm;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.mobileLink {
+  color: $ink-soft;
+}
+
+.mobileCta {
+  color: $white;
+  background: $blush;
+  border: 2px solid $blush;
+  padding: 0.65rem 1rem;
+  text-align: center;
 }
 
 .open {

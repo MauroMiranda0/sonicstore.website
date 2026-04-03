@@ -9,13 +9,15 @@ export default function HowItWorks({ steps }) {
       <div ref={revealRef} className="container reveal">
         <h2 className="section-title">Cómo Funciona</h2>
         <p className="section-subtitle">Proceso simple para pedir tus productos en minutos.</p>
-        <div className={styles.grid}>
+        <div className={styles.stepsGrid}>
           {steps.map((step) => (
-            <article key={step.id} className={styles.step}>
-              <span>{step.number}</span>
-              <h3>{step.title}</h3>
-              <p>{step.description}</p>
-            </article>
+            <div key={step.id} className={styles.stepSlot}>
+              <article className={styles.step}>
+                <span className={styles.stepNumber}>{step.number}</span>
+                <h3 className={styles.stepTitle}>{step.title}</h3>
+                <p className={styles.stepDescription}>{step.description}</p>
+              </article>
+            </div>
           ))}
         </div>
       </div>

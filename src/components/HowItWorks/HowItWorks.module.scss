@@ -1,43 +1,53 @@
 @use '../../styles/tokens' as *;
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+.stepsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
+}
+
+.stepSlot {
+  width: 100%;
+  padding: 0 0.75rem;
+  margin-bottom: 2rem;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+
+  @media (min-width: 992px) {
+    width: 25%;
+    margin-bottom: 0;
+  }
 }
 
 .step {
-  padding: 1rem;
-  border-radius: $radius-card;
-  background: $white;
-  border: 1px solid $nude-dk;
-
-  span {
-    color: $gold;
-    font-family: $font-display;
-  }
-
-  h3 {
-    margin-top: 0.6rem;
-    font-family: $font-display;
-    font-size: $text-lg;
-  }
-
-  p {
-    margin-top: 0.5rem;
-    color: $ink-soft;
-    font-size: $text-sm;
-  }
+  border-left: 2px solid $blush;
+  padding-left: 1.25rem;
+  height: 100%;
 }
 
-@media (max-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.stepNumber {
+  font-family: $font-display;
+  font-size: $h3-size;
+  font-weight: $weight-bold;
+  color: $nude-dk;
+  line-height: 1;
+  margin-bottom: 0.75rem;
 }
 
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.stepTitle {
+  font-family: $font-body;
+  font-size: $text-base;
+  font-weight: $weight-bold;
+  color: $ink;
+  margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: $weight-regular;
+  color: $ink-soft;
+  line-height: 1.6;
 }

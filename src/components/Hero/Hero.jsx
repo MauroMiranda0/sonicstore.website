@@ -4,6 +4,7 @@ import { brands } from '../../data/brands';
 import { heroSlides } from '../../data/heroSlides';
 import BackgroundSlider from '../BackgroundSlider/BackgroundSlider';
 import { useScrollReveal } from '../../hooks/useScrollReveal';
+import SmartImage from '../common/SmartImage';
 
 export default function Hero() {
   const revealRef = useScrollReveal();
@@ -34,7 +35,7 @@ export default function Hero() {
           <BackgroundSlider slides={heroSlides} />
           {featuredBrands.map((brand, index) => (
             <div key={brand.id} className={styles.logoWrap} style={{ backgroundColor: brand.bgColor }}>
-              <img
+              <SmartImage
                 src={brand.logoSrc}
                 alt={brand.logoAlt}
                 loading={index === 0 ? 'eager' : 'lazy'}
@@ -43,6 +44,7 @@ export default function Hero() {
                   e.currentTarget.nextElementSibling.style.display = 'flex';
                 }}
               />
+              <div className={styles.logoFallback}>{brand.name}</div>
             </div>
           ))}
         </div>

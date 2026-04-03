@@ -2,17 +2,17 @@
 
 .wrap {
   margin-top: 1rem;
-  padding: 0.9rem 0;
-  border-top: 1px solid $nude-dk;
-  border-bottom: 1px solid $nude-dk;
+  background: $ink;
+  border-top: 2px solid $blush;
+  border-bottom: 2px solid $blush;
   overflow: hidden;
-  background: $nude;
+  padding: 0.8rem 0;
 }
 
 .track {
   display: inline-flex;
   min-width: 100%;
-  gap: 2rem;
+  gap: 0;
   white-space: nowrap;
   animation: marquee var(--duration) linear infinite;
 
@@ -21,10 +21,20 @@
   }
 
   span {
-    color: $gold;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-family: $font-body;
     font-size: $text-sm;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: $white;
+    white-space: nowrap;
+    padding: 0 2.5rem;
+
+    &::after {
+      content: '·';
+      margin-left: 2.5rem;
+      color: $gold;
+    }
   }
 }
 

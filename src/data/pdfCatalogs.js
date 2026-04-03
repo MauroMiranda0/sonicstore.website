@@ -8,6 +8,9 @@ export const pdfCatalogs = [
     logoSrc: getImageUrl('img/Marcas/terramar.png'),
     logoAlt: 'Logo Terramar Brands',
     bgGradient: 'linear-gradient(135deg, #0a4f7a 0%, #0e7db5 100%)',
+    productName: 'Terramar Suero Vitamina C',
+    productImageSrc: '/img/productos_std/Terramar Suero Vitamina C.jpg',
+    productImageAlt: 'Suero Vitamina C de Terramar Brands',
     waMessage: 'Hola. Me gustaría recibir el catálogo PDF de Terramar Brands.',
   },
   {
@@ -17,6 +20,9 @@ export const pdfCatalogs = [
     logoSrc: getImageUrl('img/Marcas/forever.png'),
     logoAlt: 'Logo Forever Living',
     bgGradient: 'linear-gradient(135deg, #F7BF01 0%, #F8D45E 100%)',
+    productName: 'Forever Aloe Vera Gel',
+    productImageSrc: '/img/productos_std/Forever Aloe Vera Gel.webp',
+    productImageAlt: 'Gel de Aloe Vera de Forever Living',
     waMessage: 'Hola. Me gustaría recibir el catálogo PDF de Forever Living.',
   },
 ];

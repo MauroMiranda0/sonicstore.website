@@ -20,21 +20,29 @@ $color-background: $surface;
 $color-text:       $ink;
 $color-text-muted: $ink-soft;
 
-$font-display: 'Playfair Display', Georgia, serif;
-$font-body:    'DM Sans', sans-serif;
+$font-display: 'Kaisei HarunoUmi', Georgia, serif;
+$font-body:    'DM Sans', Arial, sans-serif;
+$weight-regular: 400;
+$weight-bold: 700;
 
 $text-xs:   0.65rem;
-$text-sm:   0.75rem;
+$text-sm:   0.8rem;
 $text-base: 0.95rem;
-$text-lg:   1.15rem;
+$text-lg:   1rem;
 $text-xl:   1.45rem;
 $text-hero: clamp(2.6rem, 5.5vw, 5rem);
 $text-sec:  clamp(1.7rem, 3.5vw, 2.8rem);
+$h2-size: 3rem;
+$h3-size: 2.6rem;
 
 $viewport-content: min(90vw, 1440px);
-$radius:           6px;
-$radius-card:      12px;
-$transition:       0.3s cubic-bezier(.4,0,.2,1);
+$radius: 0px;
+$radius-card: 0px;
+$radius-pill: 999px;
+$border-subtle: 1px solid $nude-dk;
+$border-strong: 1px solid $ink-soft;
+$border-accent: 2px solid $blush;
+$transition: 0.25s cubic-bezier(.4,0,.2,1);
 
 $section-padding-y:        5.5rem;
 $section-padding-y-mobile: 4rem;

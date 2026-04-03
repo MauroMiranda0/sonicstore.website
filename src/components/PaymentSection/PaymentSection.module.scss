@@ -4,36 +4,74 @@
   background: $nude;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+.methodsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
 }
 
-.card {
-  border-radius: $radius-card;
-  border: 1px solid $nude-dk;
-  padding: 1rem;
+.methodSlot {
+  width: 100%;
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 992px) {
+    width: 33.333%;
+  }
+}
+
+.methodCard {
+  border: $border-subtle;
+  border-radius: $radius;
+  padding: 2rem 1.5rem;
+  height: 100%;
   background: $white;
+  transition: border-color $transition;
 
-  span {
-    font-size: 1.4rem;
-  }
-
-  h3 {
-    margin-top: 0.6rem;
-    font-family: $font-display;
-  }
-
-  p {
-    margin-top: 0.4rem;
-    color: $ink-soft;
-    font-size: $text-sm;
+  &:hover {
+    border-color: $blush;
   }
 }
 
-@media (max-width: 900px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+.methodIconWrap {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.methodIcon {
+  font-size: 2rem;
+  display: inline-block;
+}
+
+.methodIconImage {
+  max-height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  max-width: 100%;
+}
+
+.methodIconImageMercadoPago {
+  max-height: 3.6rem;
+}
+
+.methodName {
+  font-family: $font-body;
+  font-size: $text-base;
+  font-weight: $weight-bold;
+  color: $ink;
+  margin-bottom: 0.5rem;
+}
+
+.methodDescription {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: $weight-regular;
+  color: $ink-soft;
+  line-height: 1.6;
 }

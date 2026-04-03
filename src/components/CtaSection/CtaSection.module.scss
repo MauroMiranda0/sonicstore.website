@@ -1,35 +1,67 @@
 @use '../../styles/tokens' as *;
 
 .wrap {
-  position: relative;
+  background: $ink;
 }
 
 .box {
-  background: $ink;
   color: $white;
-  border-radius: $radius-card;
-  padding: 2rem;
+  border-radius: $radius;
+  padding: 2.5rem 2rem;
   text-align: center;
+}
 
-  h2 {
-    font-size: $text-sec;
-    font-family: $font-display;
-  }
+.ctaEyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $gold;
+  border: 1px solid $gold;
+  border-radius: $radius;
+  padding: 0.25rem 0.6rem;
+}
 
-  p {
-    margin: 0.8rem auto 0;
-    max-width: 60ch;
-  }
+.ctaTitle {
+  font-family: $font-display;
+  font-size: $text-sec;
+  font-weight: $weight-bold;
+  color: $white;
+  margin: 1.5rem auto 0.75rem;
+  max-width: 18ch;
+}
 
-  button {
-    margin-top: 1.2rem;
-    border: 0;
-    background: $wa-green;
-    color: $white;
-    border-radius: $radius;
-    padding: 0.85rem 1.2rem;
-    text-transform: uppercase;
-    font-size: $text-sm;
-    cursor: pointer;
+.ctaCopy {
+  margin: 0 auto;
+  max-width: 60ch;
+  font-family: $font-body;
+  font-size: $text-base;
+  font-weight: $weight-regular;
+  color: rgb(255 255 255 / 82%);
+}
+
+.ctaBtn {
+  margin-top: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: $wa-green;
+  color: $white;
+  font-family: $font-body;
+  font-weight: $weight-bold;
+  font-size: $text-base;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 1rem 2.5rem;
+  border-radius: $radius;
+  border: 2px solid $wa-green;
+  cursor: pointer;
+  transition: background-color $transition, color $transition;
+
+  &:hover {
+    background: transparent;
+    color: $wa-green;
   }
 }

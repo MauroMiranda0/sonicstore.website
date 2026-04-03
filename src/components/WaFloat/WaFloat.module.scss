@@ -7,28 +7,35 @@
   z-index: 1200;
   width: 56px;
   height: 56px;
-  border-radius: 50%;
+  border-radius: $radius-pill;
   border: 0;
   background: $wa-green;
   color: $white;
-  font-size: 1.3rem;
   display: grid;
   place-items: center;
   cursor: pointer;
-  box-shadow: 0 14px 24px rgb(37 211 102 / 32%);
-  animation: pulse 2.2s infinite;
+  box-shadow: 0 4px 20px rgb(37 211 102 / 40%);
+  animation: pulse 2.5s ease-in-out infinite;
+  transition: transform $transition;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgb(37 211 102 / 38%);
-  }
-
-  70% {
-    box-shadow: 0 0 0 14px rgb(37 211 102 / 0%);
-  }
-
+  0%,
   100% {
-    box-shadow: 0 0 0 0 rgb(37 211 102 / 0%);
+    box-shadow: 0 4px 20px rgb(37 211 102 / 40%);
+  }
+
+  50% {
+    box-shadow: 0 4px 40px rgb(37 211 102 / 70%);
   }
 }

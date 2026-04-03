@@ -3,5 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '/sonicstore.website/'
+  test: {
+    environment: 'jsdom',
+    setupFiles: './tests/setupTests.js',
+    css: true,
+    globals: true,
+  },
 });

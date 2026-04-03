@@ -13,11 +13,16 @@ export default function PdfSection({ catalogs }) {
   return (
     <section id="pdf" className={`section ${styles.wrap}`}>
       <div ref={revealRef} className="container reveal">
-        <h2 className="section-title">Catálogos PDF</h2>
-        <p className="section-subtitle">Pide fichas completas en PDF para revisar detalles y disponibilidad de productos.</p>
-        <div className={styles.grid}>
+        <div className={styles.sectionHead}>
+          <p className={styles.eyebrow}>Formato Descargable</p>
+          <h2 className={styles.sectionTitle}>Catálogos PDF</h2>
+          <p className="section-subtitle">Pide fichas completas en PDF para revisar detalles y disponibilidad de productos.</p>
+        </div>
+        <div className={styles.pdfGrid}>
           {catalogs.map((catalog) => (
-            <PdfCard key={catalog.id} catalog={catalog} onCtaClick={handleCtaClick} />
+            <div key={catalog.id} className={styles.cardSlot}>
+              <PdfCard catalog={catalog} onCtaClick={handleCtaClick} />
+            </div>
           ))}
         </div>
       </div>

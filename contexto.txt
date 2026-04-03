@@ -1039,10 +1039,17 @@ De ser posible en este orden Aspiracional, Accesible, familiar, Moderno, minimal
 
 
 
-Prompt Inicial: Basándote en la Fuente de verdad para identidad, principios de diseño y reglas de componentes en @CONSTITUTION.md, 
-Contratos de componentes React, estructura de datos y reglas de renderizado en @SPECIFICATION.md y Plan de migración HTML/CSS → React + SCSS por fases,
-con criterios de aceptación en @TECHNICAL_PLAN.md, implementa el repositorio del proyecto. Asegúrate de que las validaciones coincidan con los criterios
+Prompt Inicial: Basándote en la Fuente de verdad para identidad, principios de diseño y reglas de componentes en @constitution_v2, Contratos de componentes React, estructura de datos y reglas de renderizado en @specification_v2.md y Plan de migración HTML/CSS → React + SCSS por fases, con criterios de aceptación en @technical_plan_v2.md, implementa el repositorio del proyecto. Asegúrate de que las validaciones coincidan con los criterios
 de aceptación de la spec.
 
 
-Genera una suite de pruebas unitarias y de integración que verifiquen punto por punto los requisitos definidos en SPECIFICATION.md y TECHNICAL_PLAN.md
+
+
+Basándote en la Fuente de verdad para identidad, principios de diseño y reglas de componentes en @constitution_v2.md, Contratos de componentes React, estructura de datos y reglas de renderizado en @specification_v2.md y con criterios de aceptación en @technical_plan_v2.md,
+
+
+
+
+Genera una suite de pruebas unitarias y de integración que verifiquen punto por punto los requisitos definidos en specification_v2.md y technical_plan_v2.md
+
+

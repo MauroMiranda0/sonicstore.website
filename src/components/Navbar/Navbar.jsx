@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import styles from './Navbar.module.scss';
 import { SITE_NAME } from '../../config/constants';
-import getImageUrl from '../../config/imageUrls';
+import { resolveAssetPath } from '../../utils/assets';
 
 const NAV_LINKS = [
   { href: '#online', label: 'Catálogos Online' },
   { href: '#pdf', label: 'Catálogos PDF' },
   { href: '#como-funciona', label: 'Cómo Funciona' },
   { href: '#pagos', label: 'Pagos' },
-  { href: '#pedido', label: 'Pedir Ahora' },
+  { href: '#pedido', label: 'Pedir Ahora', cta: true },
 ];
 
 export default function Navbar() {
@@ -34,13 +34,13 @@ export default function Navbar() {
     <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.brand} aria-label="Ir al inicio">
-          <img src={getImageUrl('logo.png')} alt={`${SITE_NAME} logo`} width="36" height="36" />
+          <img src={resolveAssetPath('/logo.png')} alt={`${SITE_NAME} logo`} width="36" height="36" />
           <span>{SITE_NAME}</span>
         </a>
 
         <nav className={styles.links} aria-label="Navegación principal">
           {NAV_LINKS.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a key={link.href} href={link.href} className={link.cta ? styles.navCta : styles.navLink}>
               {link.label}
             </a>
           ))}
@@ -62,7 +62,7 @@ export default function Navbar() {
 
       <nav id="mobile-nav" className={`${styles.overlay} ${isMenuOpen ? styles.open : ''}`} aria-label="Navegación móvil">
         {NAV_LINKS.map((link) => (
-          <a key={link.href} href={link.href} onClick={closeMenu}>
+          <a key={link.href} href={link.href} onClick={closeMenu} className={link.cta ? styles.mobileCta : styles.mobileLink}>
             {link.label}
           </a>
         ))}

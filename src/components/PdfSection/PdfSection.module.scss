@@ -4,75 +4,197 @@
   background: $nude;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem;
+.sectionHead {
+  margin-bottom: 3rem;
 }
 
-.card {
-  min-height: 340px;
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $gold;
+  border: $border-strong;
+  border-color: $gold;
+  padding: 0.25rem 0.6rem;
+  border-radius: $radius;
+  margin-bottom: 1rem;
 }
 
-.cardWrap {
-  min-height: 340px;
+.sectionTitle {
+  font-family: $font-display;
+  font-size: $h2-size;
+  font-weight: $weight-bold;
+  color: $ink;
+  line-height: 1.1;
 }
 
-.cardContent {
+.pdfGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
+}
+
+.cardSlot {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    width: 33.333%;
+  }
+
+  @media (min-width: 992px) {
+    width: 20%;
+  }
+}
+
+.pdfCard {
+  background: $white;
+  border: $border-subtle;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: border-color $transition, transform $transition;
   height: 100%;
-  padding: 0.9rem;
-  display: grid;
-  gap: 0.75rem;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
 
-  h3 {
-    font-family: $font-display;
-  }
-
-  p {
-    color: $ink-soft;
-    font-size: $text-sm;
-  }
-
-  button {
-    margin-top: auto;
-    background: transparent;
-    color: $blush;
-    border: 1px solid $blush;
-    padding: 0.78rem;
-    border-radius: $radius;
-    text-transform: uppercase;
-    font-size: $text-sm;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: all $transition;
-
-    &:hover {
-      background: $blush;
-      color: $white;
-    }
+  &:hover {
+    border-color: $blush;
+    transform: translateY(-3px);
   }
 }
 
-.logoSurface {
-  min-height: 115px;
-  border-radius: calc($radius-card - 4px);
-  display: grid;
-  place-items: center;
+.logoArea {
+  position: relative;
+  background: var(--card-gradient);
+  aspect-ratio: 3 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
 
   img {
-    max-height: 56px;
-    width: auto;
+    width: 66.666%;
+    max-width: 14.4rem;
+    max-height: 7.6rem;
+    object-fit: contain;
   }
+}
+
+.pdfBadge {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: $ink;
+  color: $white;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border-radius: $radius;
 }
 
 .logoFallback {
   color: $white;
   font-family: $font-display;
+  font-size: $text-lg;
+  font-weight: $weight-bold;
 }
 
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
+.cardBody {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.catalogName {
+  font-family: $font-body;
+  font-size: $text-lg;
+  font-weight: $weight-bold;
+  color: $ink;
+  line-height: 1.2;
+}
+
+.catalogDescription {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: $weight-regular;
+  color: $ink-soft;
+  line-height: 1.45;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.product img,
+.productFallback {
+  width: 100%;
+  height: 190px;
+  flex: none;
+  border-radius: $radius;
+}
+
+.product img {
+  object-fit: cover;
+  object-position: center;
+  border: $border-subtle;
+}
+
+.productFallback {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: $white;
+  color: $ink-soft;
+  padding: 0.75rem;
+  font-size: $text-sm;
+  border: $border-subtle;
+}
+
+.productName {
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-regular;
+  color: $ink-soft;
+}
+
+.cardCta {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: $border-subtle;
+
+  button {
+    width: 100%;
+    background: transparent;
+    color: $blush;
+    border: 2px solid $blush;
+    border-radius: $radius;
+    padding: 0.65rem 1rem;
+    font-family: $font-body;
+    font-size: $text-sm;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    transition: background-color $transition, color $transition;
+
+    &:hover {
+      background: $blush;
+      color: $white;
+    }
   }
 }
