@@ -9,13 +9,15 @@ export default function PaymentSection({ methods }) {
       <div ref={revealRef} className="container reveal">
         <h2 className="section-title">Métodos de Pago</h2>
         <p className="section-subtitle">Elige la opción que te resulte más cómoda para cerrar tu pedido.</p>
-        <div className={styles.grid}>
+        <div className={styles.methodsGrid}>
           {methods.map((method) => (
-            <article key={method.id} className={styles.card}>
-              <span aria-hidden="true">{method.icon}</span>
-              <h3>{method.name}</h3>
-              <p>{method.description}</p>
-            </article>
+            <div key={method.id} className={styles.methodSlot}>
+              <article className={styles.methodCard}>
+                <span className={styles.methodIcon} aria-hidden="true">{method.icon}</span>
+                <h3 className={styles.methodName}>{method.name}</h3>
+                <p className={styles.methodDescription}>{method.description}</p>
+              </article>
+            </div>
           ))}
         </div>
       </div>

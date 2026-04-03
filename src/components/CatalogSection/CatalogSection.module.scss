@@ -1,53 +1,136 @@
 @use '../../styles/tokens' as *;
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 1rem;
+.sectionHead {
+  margin-bottom: 3rem;
 }
 
-.card {
-  min-height: 470px;
+.eyebrow {
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $gold;
+  border: $border-strong;
+  border-color: $gold;
+  padding: 0.25rem 0.6rem;
+  border-radius: $radius;
+  margin-bottom: 1rem;
 }
 
-.cardWrap {
-  min-height: 470px;
+.sectionTitle {
+  font-family: $font-display;
+  font-size: $h2-size;
+  font-weight: $weight-bold;
+  color: $ink;
+  line-height: 1.1;
 }
 
-.cardContent {
+.brandGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.75rem;
+}
+
+.cardSlot {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 0.75rem;
+  margin-bottom: 1.5rem;
+
+  @media (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (min-width: 768px) {
+    width: 33.333%;
+  }
+
+  @media (min-width: 992px) {
+    width: 20%;
+  }
+}
+
+.brandCard {
+  background: $white;
+  border: $border-subtle;
+  border-radius: $radius;
+  overflow: hidden;
+  transition: border-color $transition, transform $transition;
+  cursor: pointer;
   height: 100%;
-  padding: 0.9rem;
-  display: grid;
-  gap: 0.75rem;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
 
-  h3 {
-    font-family: $font-display;
-    font-size: $text-lg;
+  &:hover {
+    border-color: $blush;
+    transform: translateY(-3px);
   }
+}
 
-  p {
-    color: $ink-soft;
-    font-size: $text-sm;
+.logoArea {
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--card-bg, #{$nude});
+  border-bottom: $border-subtle;
+
+  img {
+    max-width: 7rem;
+    max-height: 3.5rem;
+    object-fit: contain;
   }
+}
 
-  button {
-    margin-top: auto;
-    border: 0;
-    background: $blush;
-    color: $white;
-    padding: 0.78rem;
-    border-radius: $radius;
-    text-transform: uppercase;
-    font-size: $text-sm;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: background-color $transition;
+.logoFallback {
+  font-family: $font-display;
+  font-size: $text-lg;
+  font-weight: $weight-bold;
+  color: $ink;
+}
 
-    &:hover {
-      background: $blush-dk;
-    }
-  }
+.cardBody {
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $gold;
+  border: 1px solid $gold;
+  border-radius: $radius;
+  padding: 0.15rem 0.4rem;
+  align-self: flex-start;
+}
+
+.brandName {
+  font-family: $font-body;
+  font-size: $text-lg;
+  font-weight: $weight-bold;
+  color: $ink;
+  line-height: 1.2;
+}
+
+.brandDescription {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-weight: $weight-regular;
+  color: $ink-soft;
+  line-height: 1.45;
+  flex: 1;
 }
 
 .product {
@@ -59,12 +142,12 @@
 .productFallback {
   width: 100%;
   height: 150px;
-  border-radius: calc($radius-card - 4px);
+  border-radius: $radius;
 }
 
 .product img {
   object-fit: cover;
-  border: 1px solid $nude-dk;
+  border: $border-subtle;
 }
 
 .productFallback {
@@ -78,36 +161,34 @@
 }
 
 .productName {
+  font-family: $font-body;
   font-size: $text-xs;
+  font-weight: $weight-regular;
   color: $ink-soft;
 }
 
-.logoSurface {
-  border-radius: calc($radius-card - 4px);
-  min-height: 110px;
-  display: grid;
-  place-items: center;
+.cardCta {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: $border-subtle;
 
-  img {
-    max-height: 58px;
-    width: auto;
-  }
-}
+  button {
+    width: 100%;
+    background: $blush;
+    color: $white;
+    font-family: $font-body;
+    font-weight: $weight-bold;
+    font-size: $text-sm;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.65rem 1rem;
+    border: none;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: background-color $transition;
 
-.logoFallback {
-  font-family: $font-display;
-  font-size: $text-lg;
-}
-
-.badge {
-  color: $gold;
-  text-transform: uppercase;
-  font-size: $text-xs;
-  letter-spacing: 0.08em;
-}
-
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
+    &:hover {
+      background: $blush-dk;
+    }
   }
 }

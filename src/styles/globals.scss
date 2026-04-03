@@ -17,7 +17,7 @@ body {
   background: $surface;
   color: $ink;
   font-family: $font-body;
-  font-weight: 300;
+  font-weight: $weight-regular;
   overflow-x: hidden;
   line-height: 1.6;
 
@@ -57,9 +57,9 @@ button {
 
 .reveal {
   opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-  transition-delay: calc(var(--stagger-index, 0) * 80ms);
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: calc(var(--stagger-index, 0) * 0.1s);
 }
 
 .reveal.in {
@@ -69,14 +69,18 @@ button {
 
 .section-title {
   font-family: $font-display;
-  font-size: $text-sec;
+  font-size: $h2-size;
+  font-weight: $weight-bold;
   color: $ink;
   margin-bottom: 0.8rem;
+  line-height: 1.1;
 }
 
 .section-subtitle {
   max-width: 680px;
   color: $ink-soft;
+  font-size: $text-base;
+  font-weight: $weight-regular;
   margin-bottom: 2.4rem;
 }
 

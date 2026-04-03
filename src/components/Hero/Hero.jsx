@@ -43,6 +43,7 @@ export default function Hero() {
                   e.currentTarget.nextElementSibling.style.display = 'flex';
                 }}
               />
+              <div className={styles.logoFallback}>{brand.name}</div>
             </div>
           ))}
         </div>

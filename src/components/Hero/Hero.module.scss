@@ -6,81 +6,113 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 2.4rem;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
+  gap: 3rem;
 }
 
 .eyebrow {
-  color: $gold;
+  display: inline-block;
+  font-family: $font-body;
+  font-size: $text-xs;
+  font-weight: $weight-bold;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: $text-xs;
-  margin-bottom: 0.9rem;
+  color: $gold;
+  border: $border-strong;
+  border-color: $gold;
+  padding: 0.25rem 0.6rem;
+  border-radius: $radius;
+  margin-bottom: 1.5rem;
 }
 
 .title {
   font-family: $font-display;
   font-size: $text-hero;
-  line-height: 1.04;
+  font-weight: $weight-bold;
+  line-height: 1.05;
+  color: $ink;
 }
 
 .copy {
   margin-top: 1rem;
-  max-width: 60ch;
+  max-width: 38ch;
   color: $ink-soft;
+  font-family: $font-body;
+  font-size: $text-base;
+  font-weight: $weight-regular;
+  line-height: 1.65;
 }
 
 .actions {
   display: flex;
+  gap: 1rem;
   flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: 1.6rem;
+  margin-top: 2rem;
 }
 
 .primary,
 .secondary {
-  padding: 0.8rem 1.05rem;
+  padding: 0.85rem 2rem;
   border-radius: $radius;
+  border: 2px solid;
+  font-family: $font-body;
   font-size: $text-sm;
+  font-weight: $weight-bold;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  transition: background-color $transition;
+  letter-spacing: 0.08em;
+  transition: background-color $transition, color $transition;
 }
 
 .primary {
   background: $blush;
   color: $white;
+  border-color: $blush;
 
   &:hover {
-    background: $blush-dk;
+    background: transparent;
+    color: $blush;
   }
 }
 
 .secondary {
-  background: $nude;
+  background: transparent;
   color: $ink;
+  border-color: $ink;
+
+  &:hover {
+    background: $ink;
+    color: $white;
+  }
 }
 
 .stats {
   list-style: none;
-  margin-top: 2rem;
   display: flex;
-  gap: 1rem;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: $border-subtle;
 
   li {
-    padding-right: 1rem;
-    border-right: 1px solid $nude-dk;
+    display: grid;
+    gap: 0.35rem;
   }
 
   strong {
     display: block;
     font-family: $font-display;
-    font-size: 1.5rem;
+    font-size: $text-xl;
+    font-weight: $weight-bold;
+    color: $blush;
   }
 
   span {
-    font-size: $text-sm;
+    font-family: $font-body;
+    font-size: $text-xs;
+    font-weight: $weight-bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     color: $ink-soft;
   }
 }
@@ -92,29 +124,8 @@
   overflow: hidden;
 }
 
-.floatCard {
-  position: absolute;
-  z-index: 3;
-  width: min(280px, 80%);
-  background: $white;
-  border-radius: $radius-card;
-  padding: 0.9rem;
-  box-shadow: 0 16px 34px rgb(29 19 24 / 13%);
-  animation: float 5s ease-in-out infinite;
-
-  h3 {
-    margin-top: 0.8rem;
-    font-family: $font-display;
-  }
-
-  p {
-    color: $ink-soft;
-    font-size: $text-sm;
-  }
-}
-
 .logoWrap {
-  border-radius: calc($radius-card - 3px);
+  border-radius: $radius-card;
   min-height: 115px;
   display: grid;
   place-items: center;
@@ -134,34 +145,7 @@
   min-height: 115px;
   font-family: $font-display;
   font-size: $text-lg;
-}
-
-.card1 {
-  top: 2%;
-  left: 2%;
-}
-
-.card2 {
-  top: 28%;
-  right: 0;
-  animation-delay: 0.5s;
-}
-
-.card3 {
-  bottom: 0;
-  left: 12%;
-  animation-delay: 1s;
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+  font-weight: $weight-bold;
 }
 
 @media (max-width: 980px) {
@@ -176,11 +160,7 @@
 
 @media (max-width: 560px) {
   .stats {
-    flex-direction: column;
-
-    li {
-      border: 0;
-      padding-right: 0;
-    }
+    flex-wrap: wrap;
+    gap: 1.2rem;
   }
 }

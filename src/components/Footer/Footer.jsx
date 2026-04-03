@@ -10,17 +10,17 @@ export default function Footer() {
             <img src="/logo.png" alt={`${SITE_NAME} logo`} width="34" height="34" loading="lazy" />
             <span>{SITE_NAME}</span>
           </a>
-          <p>{SITE_TAGLINE}</p>
+          <p className={styles.tagline}>{SITE_TAGLINE}</p>
         </div>
 
         <nav aria-label="Navegación secundaria" className={styles.links}>
-          <a href="#online">Catálogos Online</a>
-          <a href="#pdf">Catálogos PDF</a>
-          <a href="#pagos">Métodos de Pago</a>
-          <a href={buildWaUrl('Hola. Quiero información sobre catálogos.')} target="_blank" rel="noreferrer noopener">WhatsApp</a>
+          <a href="#online" className={styles.link}>Catálogos Online</a>
+          <a href="#pdf" className={styles.link}>Catálogos PDF</a>
+          <a href="#pagos" className={styles.link}>Métodos de Pago</a>
+          <a href={buildWaUrl('Hola. Quiero información sobre catálogos.')} target="_blank" rel="noreferrer noopener" className={styles.link}>WhatsApp</a>
         </nav>
       </div>
-      <small>© {new Date().getFullYear()} {SITE_NAME} · WhatsApp: +{WA_NUMBER}</small>
+      <small className={styles.copy}>© {new Date().getFullYear()} {SITE_NAME} · WhatsApp: +{WA_NUMBER}</small>
     </footer>
   );
 }

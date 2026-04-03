@@ -13,11 +13,16 @@ export default function CatalogSection({ brands }) {
   return (
     <section id="online" className="section">
       <div ref={revealRef} className="container reveal">
-        <h2 className="section-title">Catálogos Online</h2>
-        <p className="section-subtitle">Explora las marcas disponibles y solicita el catálogo que necesitas en un solo clic.</p>
-        <div className={styles.grid}>
+        <div className={styles.sectionHead}>
+          <p className={styles.eyebrow}>Catálogo Digital</p>
+          <h2 className={styles.sectionTitle}>Catálogos Online</h2>
+          <p className="section-subtitle">Explora las marcas disponibles y solicita el catálogo que necesitas en un solo clic.</p>
+        </div>
+        <div className={styles.brandGrid}>
           {brands.map((brand) => (
-            <BrandCard key={brand.id} brand={brand} onCtaClick={handleCtaClick} />
+            <div key={brand.id} className={styles.cardSlot}>
+              <BrandCard brand={brand} onCtaClick={handleCtaClick} />
+            </div>
           ))}
         </div>
       </div>

@@ -9,9 +9,10 @@ export default function CtaSection() {
   return (
     <section id="pedido" className={`section ${styles.wrap}`}>
       <div className={`container ${styles.box}`}>
-        <h2>¿Lista para pedir?</h2>
-        <p>Escríbenos por WhatsApp y recibe atención personalizada para elegir tus productos.</p>
-        <button type="button" onClick={openWhatsApp}>Iniciar Pedido</button>
+        <p className={styles.ctaEyebrow}>Atención Personalizada</p>
+        <h2 className={styles.ctaTitle}>¿Lista para pedir?</h2>
+        <p className={styles.ctaCopy}>Escríbenos por WhatsApp y recibe atención personalizada para elegir tus productos.</p>
+        <button type="button" onClick={openWhatsApp} className={styles.ctaBtn}>Iniciar Pedido</button>
       </div>
     </section>
   );
