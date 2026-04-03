@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './Navbar.module.scss';
 import { SITE_NAME } from '../../config/constants';
+import { resolveAssetPath } from '../../utils/assets';
 
 const NAV_LINKS = [
   { href: '#online', label: 'Catálogos Online' },
@@ -33,7 +34,7 @@ export default function Navbar() {
     <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.brand} aria-label="Ir al inicio">
-          <img src="/logo.png" alt={`${SITE_NAME} logo`} width="36" height="36" />
+          <img src={resolveAssetPath('/logo.png')} alt={`${SITE_NAME} logo`} width="36" height="36" />
           <span>{SITE_NAME}</span>
         </a>
 
