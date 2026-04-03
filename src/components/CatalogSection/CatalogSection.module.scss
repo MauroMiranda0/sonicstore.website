@@ -134,19 +134,19 @@
   display: flex;
   flex-direction: column;
   gap: 0.45rem;
-  flex: 1;
 }
 
 .product img,
 .productFallback {
   width: 100%;
-  min-height: 150px;
-  flex: 1;
+  height: 190px;
+  flex: none;
   border-radius: $radius;
 }
 
 .product img {
   object-fit: cover;
+  object-position: center;
   border: $border-subtle;
 }
 
