@@ -24,14 +24,14 @@
 
 .brand {
   display: inline-flex;
-  gap: 0.6rem;
   align-items: center;
-  font-family: $font-display;
-  font-size: $text-xl;
-  font-weight: $weight-bold;
+  line-height: 0;
 
   img {
-    border-radius: $radius;
+    display: block;
+    width: auto;
+    height: 58px;
+    object-fit: contain;
   }
 }
 
@@ -129,6 +129,10 @@
 }
 
 @media (max-width: 900px) {
+  .brand img {
+    height: 50px;
+  }
+
   .links {
     display: none;
   }
