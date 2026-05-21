@@ -13,8 +13,8 @@ export default function Footer() {
               <img
                 src={resolveAssetPath('/public/img/logo.png')}
                 alt={`Logo oficial de ${SITE_NAME}`}
-                width="170"
-                height="54"
+                width="340"
+                height="108"
                 loading="lazy"
               />
             </picture>

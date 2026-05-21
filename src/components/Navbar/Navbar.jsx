@@ -39,8 +39,8 @@ export default function Navbar() {
             <img
               src={resolveAssetPath('/public/img/logo.png')}
               alt={`Logo oficial de ${SITE_NAME}`}
-              width="180"
-              height="58"
+              width="360"
+              height="116"
             />
           </picture>
         </a>
