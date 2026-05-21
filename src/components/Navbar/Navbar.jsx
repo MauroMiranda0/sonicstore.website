@@ -34,8 +34,15 @@ export default function Navbar() {
     <header className={`${styles.nav} ${isScrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <a href="#" className={styles.brand} aria-label="Ir al inicio">
-          <img src={resolveAssetPath('/logo.png')} alt={`${SITE_NAME} logo`} width="36" height="36" />
-          <span>{SITE_NAME}</span>
+          <picture>
+            <source srcSet={resolveAssetPath('/public/img/logo.webp')} type="image/webp" />
+            <img
+              src={resolveAssetPath('/public/img/logo.png')}
+              alt={`Logo oficial de ${SITE_NAME}`}
+              width="360"
+              height="116"
+            />
+          </picture>
         </a>
 
         <nav className={styles.links} aria-label="Navegación principal">

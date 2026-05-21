@@ -5,8 +5,9 @@
 
 const getImageUrl = (path) => {
   const basePath = import.meta.env.BASE_URL || '/';
-  // Eliminar la barra inicial si existe para evitar duplicados
-  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  // Soporta rutas "public/img/..." y las normaliza a "img/..."
+  const withoutPublic = path.replace(/^\/?public\//, '');
+  const cleanPath = withoutPublic.startsWith('/') ? withoutPublic.slice(1) : withoutPublic;
   return `${basePath}${cleanPath}`;
 };
 

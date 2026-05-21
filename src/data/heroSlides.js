@@ -4,25 +4,25 @@ export const heroSlides = [
   {
     id: 'slide-belleza',
     title: 'Belleza',
-    image: getImageUrl('img/gallery/belleza.jpg'),
+    image: getImageUrl('public/img/gallery/belleza.jpg'),
     alt: 'Productos de belleza en exhibición',
   },
   {
     id: 'slide-moda',
     title: 'Moda',
-    image: getImageUrl('img/gallery/moda.jpg'),
+    image: getImageUrl('public/img/gallery/moda.jpg'),
     alt: 'Prendas y accesorios de moda',
   },
   {
     id: 'slide-calzado',
     title: 'Calzado',
-    image: getImageUrl('img/gallery/calzado.jpg'),
+    image: getImageUrl('public/img/gallery/calzado.jpg'),
     alt: 'Calzado para toda la familia',
   },
   {
     id: 'slide-hogar',
     title: 'Hogar',
-    image: getImageUrl('img/gallery/hogar.jpg'),
+    image: getImageUrl('public/img/gallery/hogar.jpg'),
     alt: 'Productos para el hogar',
   },
 ];
